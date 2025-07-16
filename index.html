@@ -21,7 +21,7 @@
 		<a href="form.html">Задать вопрос</a>
 	</nav>
 	
-	<section class="cards">
+  <section class="cards">
     <div class="content">
         <h2 class="title">Задачи, решаемые с помощью Python</h2>
         <p class="subtitle">Python подходит для решения широкого спектра задач. Разобьем их на категории:</p>
@@ -56,9 +56,23 @@
             <p class="card_text">В Python имеются интерфейсы доступа ко всем основным реляционным базам данных: Sybase, Oracle, Informix, ODBC, MySQL, PostgreSQL, SQLite и многим другим. С их помощью можно создавать приложения баз данных.</p>
         </div>
     </div>
-</section>
+  </section>
+
+  <script>
+	if ('serviceWorker' in navigator) {
+	  window.addEventListener('load', () => {
+	    navigator.serviceWorker.register('/sw.js')
+	      .then(registration => {
+	        console.log('ServiceWorker registration successful');
+	      })
+	      .catch(err => {
+	        console.log('ServiceWorker registration failed: ', err);
+	      });
+	  });
+	}
+  </script>
 	
-	<footer>
+  <footer>
         <p>© 2025 | ООО Nikita Vorontsov | Все права защищены</p>
     </footer>
 </BODY>
